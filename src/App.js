@@ -1,21 +1,18 @@
-import React, {Component} from 'react';
-import './App.css'
+import React from 'react';
 import Search from "./components/Search";
+import './App.css'
 import Posts from "./components/Posts";
 
-class App extends Component {
-
-  render() {
-
+const App = () => {
     return (
         <div className="App">
           <header className="App-header">
             <h1>NRead</h1>
           </header>
           <Search />
-          <Posts />
+          <Posts/>
         </div>
     );
-  }
-}
+};
+
 export default App;
