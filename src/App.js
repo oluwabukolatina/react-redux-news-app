@@ -4,6 +4,7 @@ import Search from "./components/Search";
 import Posts from "./components/Posts";
 import {getTopHeadlines} from "./actions/PostsActions";
 import {connect} from "react-redux";
+import PropTypes from 'prop-types'
 
 class App extends Component {
 
@@ -13,10 +14,16 @@ class App extends Component {
 
     }
 
+    static propTypes = {
+
+        getTopHeadlines: PropTypes.func.isRequired,
+        loading: PropTypes.bool.isRequired,
+
+    };
+
     render() {
 
         const {loading, news} = this.props;
-        console.log(loading);
 
         return (
             <div className="App">
